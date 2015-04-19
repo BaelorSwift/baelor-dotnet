@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 
 namespace Baelor.Models
 {
@@ -23,10 +24,10 @@ namespace Baelor.Models
 		[JsonProperty("producers")]
 		public string[] Producers { get; set; }
 
-		[JsonProperty("album", NullValueHandling = NullValueHandling.Ignore)]
+		[JsonProperty("album")]
 		public Album Album { get; set; }
 
-		[JsonProperty("has_lyrics")]
-		public bool HasLyrics { get; set; }
+		[JsonProperty("lyrics")]
+		public IEnumerable<Lyric> HasLyrics { get; set; }
 	}
 }

@@ -1,13 +1,14 @@
 ﻿using Newtonsoft.Json;
+using System;
 
 namespace Baelor.Models
 {
 	public class Lyric
 	{
-		[JsonProperty("lyrics")]
-		public string Lyrics { get; set; }
+		[JsonProperty("text")]
+		public string Text { get; set; }
 
-		[JsonProperty("song")]
-		public Song Song { get; set; }
+		[JsonProperty("time_code")]
+		public TimeSpan TimeCode { get; set; }
 	}
 }

@@ -66,13 +66,5 @@ namespace Baelor
 
 			return await _webConnector.PerformRequest<Album>(HttpMethod.GET, "albums/" + slug, _apiKey);
 		}
-
-		public async Task<Lyric> Lyrics(string songSlug)
-		{
-			if (_apiKey == null)
-				throw new AuthenticationRequiredException(_authenticationRequiredMessage);
-
-			return await _webConnector.PerformRequest<Lyric>(HttpMethod.GET, "songs/" + songSlug + "/lyrics", _apiKey);
-		}
 	}
 }

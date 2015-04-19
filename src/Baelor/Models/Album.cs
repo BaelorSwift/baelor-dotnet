@@ -26,7 +26,7 @@ namespace Baelor.Models
 		[JsonProperty("producers")]
 		public string[] Producers { get; set; }
 
-		[JsonProperty("songs", NullValueHandling = NullValueHandling.Ignore)]
+		[JsonProperty("songs")]
 		public Song[] Songs { get; set; }
 
 		[JsonProperty("album_cover")]

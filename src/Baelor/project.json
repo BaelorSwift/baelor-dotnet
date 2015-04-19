@@ -1,5 +1,5 @@
 ﻿{
-	"version": "0.1-alpha-*",
+	"version": "0.2-alpha-*",
 	"authors": [ "Alex Forbes-Reed <alexforbesreed@outlook.com>" ],
 	"description": ".net library for interacting with the Baelor.io Taylor Swift Api.",
 	"dependencies": {
