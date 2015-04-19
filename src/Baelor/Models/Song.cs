@@ -28,6 +28,6 @@ namespace Baelor.Models
 		public Album Album { get; set; }
 
 		[JsonProperty("lyrics")]
-		public IEnumerable<Lyric> HasLyrics { get; set; }
+		public IEnumerable<Lyric> Lyrics { get; set; }
 	}
 }
