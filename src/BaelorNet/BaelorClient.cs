@@ -1,11 +1,10 @@
-﻿using Baelor.Enums;
-using Baelor.Exceptions;
-using Baelor.Models;
-using System;
+﻿using BaelorNet.Enums;
+using BaelorNet.Exceptions;
+using BaelorNet.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Baelor
+namespace BaelorNet
 {
 	public class BaelorClient
 	{
@@ -68,3 +67,4 @@ namespace Baelor
 		}
 	}
 }
+

@@ -1,8 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Baelor.Models
+namespace BaelorNet.Models
 {
 	public class Song
 	{
@@ -30,4 +32,5 @@ namespace Baelor.Models
 		[JsonProperty("lyrics")]
 		public IEnumerable<Lyric> Lyrics { get; set; }
 	}
+
 }

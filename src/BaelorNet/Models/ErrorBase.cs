@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Baelor.Models
+namespace BaelorNet.Models
 {
 	public class ErrorBase
 	{

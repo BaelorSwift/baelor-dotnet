@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Baelor.Extentions
+namespace BaelorNet.Extentions
 {
 	public static class HttpClientExtentions
 	{

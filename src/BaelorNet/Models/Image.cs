@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace Baelor.Models
+namespace BaelorNet.Models
 {
 	public class Image
 	{

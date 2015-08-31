@@ -1,4 +1,4 @@
-﻿namespace Baelor.Enums
+﻿namespace BaelorNet.Enums
 {
 	public enum HttpMethod
 	{

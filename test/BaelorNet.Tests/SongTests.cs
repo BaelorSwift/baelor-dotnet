@@ -1,9 +1,9 @@
-﻿using Baelor.Exceptions;
+﻿using BaelorNet.Exceptions;
 using System;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Baelor.Tests
+namespace BaelorNet.Tests
 {
 	public class SongTests
 	{
@@ -37,4 +37,5 @@ namespace Baelor.Tests
 			Assert.Equal("This endpoint requires an Api Key to authenticate.", ex.Message);
 		}
 	}
+
 }

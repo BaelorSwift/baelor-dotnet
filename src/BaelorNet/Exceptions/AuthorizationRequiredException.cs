@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Baelor.Exceptions
+namespace BaelorNet.Exceptions
 {
 	public class AuthenticationRequiredException
 		: Exception

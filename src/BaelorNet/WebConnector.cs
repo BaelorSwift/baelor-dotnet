@@ -1,15 +1,14 @@
-﻿using Baelor.Extentions;
+﻿using BaelorNet.Exceptions;
+using BaelorNet.Extentions;
+using BaelorNet.Models;
+using Newtonsoft.Json;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using HttpMethod = Baelor.Enums.HttpMethod;
-using Newtonsoft.Json;
-using Baelor.Models;
-using Baelor.Exceptions;
 
-namespace Baelor
+namespace BaelorNet
 {
 	internal class WebConnector
 	{
@@ -34,7 +33,7 @@ namespace Baelor
 		/// <param name="httpMethod"></param>
 		/// <param name="apiEndpoint"></param>
 		/// <param name="data"></param>
-		internal async Task<T> PerformRequest<T>(HttpMethod httpMethod, string apiEndpoint, object data)
+		internal async Task<T> PerformRequest<T>(Enums.HttpMethod httpMethod, string apiEndpoint, object data)
 			where T : class
 		{
 			return await PerformRequest<T>(httpMethod, apiEndpoint, null, data);
@@ -46,7 +45,7 @@ namespace Baelor
 		/// <param name="httpMethod"></param>
 		/// <param name="apiEndpoint"></param>
 		/// <param name="apiKey"></param>
-		internal async Task<T> PerformRequest<T>(HttpMethod httpMethod, string apiEndpoint, string apiKey)
+		internal async Task<T> PerformRequest<T>(Enums.HttpMethod httpMethod, string apiEndpoint, string apiKey)
 			where T : class
 		{
 			return await PerformRequest<T>(httpMethod, apiEndpoint, apiKey, null);
@@ -59,12 +58,12 @@ namespace Baelor
 		/// <param name="apiEndpoint"></param>
 		/// <param name="apiKey"></param>
 		/// <param name="data"></param>
-		internal async Task<T> PerformRequest<T>(HttpMethod httpMethod, string apiEndpoint, string apiKey, object data)
+		internal async Task<T> PerformRequest<T>(Enums.HttpMethod httpMethod, string apiEndpoint, string apiKey, object data)
 			where T : class
 		{
 			if (apiEndpoint == null)
 				throw new ArgumentNullException("apiEndpoint");
-			if ((httpMethod == HttpMethod.POST || httpMethod == HttpMethod.PATCH) && data == null)
+			if ((httpMethod == Enums.HttpMethod.POST || httpMethod == Enums.HttpMethod.PATCH) && data == null)
 				throw new ArgumentNullException("data");
 
 			var uri = BuildApiUri(apiEndpoint);
@@ -83,21 +82,21 @@ namespace Baelor
 				HttpResponseMessage response = null;
 				switch (httpMethod)
 				{
-					case HttpMethod.POST:
+					case Enums.HttpMethod.POST:
 						response = await httpClient.PostAsync(uri,
 							new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json"));
 						break;
 
-					case HttpMethod.PATCH:
+					case Enums.HttpMethod.PATCH:
 						response = await httpClient.PatchAsync(uri,
 							new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json"));
 						break;
 
-					case HttpMethod.GET:
+					case Enums.HttpMethod.GET:
 						response = await httpClient.GetAsync(uri);
 						break;
 
-					case HttpMethod.DELETE:
+					case Enums.HttpMethod.DELETE:
 						response = await httpClient.DeleteAsync(uri);
 						break;
 

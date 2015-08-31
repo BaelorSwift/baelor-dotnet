@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace Baelor.Models
+namespace BaelorNet.Models
 {
 	public class Album
 	{
@@ -32,4 +32,5 @@ namespace Baelor.Models
 		[JsonProperty("album_cover")]
 		public Image AlbumCover { get; set; }
 	}
+
 }
