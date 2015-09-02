@@ -5,8 +5,8 @@ namespace BaelorNet.Models
 {
 	public class Lyric
 	{
-		[JsonProperty("text")]
-		public string Text { get; set; }
+		[JsonProperty("content")]
+		public string Content { get; set; }
 
 		[JsonProperty("time_code")]
 		public TimeSpan TimeCode { get; set; }

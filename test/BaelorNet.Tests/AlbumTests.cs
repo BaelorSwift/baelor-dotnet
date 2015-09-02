@@ -15,13 +15,7 @@ namespace BaelorNet.Tests
 			var albums = await baelorClient.Albums();
 			Assert.NotEmpty(albums);
 		}
-
-		[Fact]
-		public void WillFailTest()
-		{
-			Assert.NotNull(null);
-		}
-
+		
 		[Theory]
 		[InlineData("1989")]
 		[InlineData("taylor-swift")]
