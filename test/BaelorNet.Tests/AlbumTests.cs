@@ -16,6 +16,12 @@ namespace BaelorNet.Tests
 			Assert.NotEmpty(albums);
 		}
 
+		[Fact]
+		public void WillFailTest()
+		{
+			Assert.NotNull(null);
+		}
+
 		[Theory]
 		[InlineData("1989")]
 		[InlineData("taylor-swift")]
