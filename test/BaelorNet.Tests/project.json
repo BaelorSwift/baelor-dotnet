@@ -9,14 +9,9 @@
 	"projectUrl": "",
 	"licenseUrl": "",
 	"dependencies": {
-		"System.Collections": "4.0.10-beta-23019",
-		"System.Linq": "4.0.0-beta-23019",
-		"System.Threading": "4.0.10-beta-23019",
-		"System.Runtime": "4.0.20-beta-23109",
-		"Microsoft.CSharp": "4.0.0-beta-23019",
 		"BaelorNet": "1.0.0-*",
-		"xunit": "2.1.0-beta4-build3109",
-		"xunit.runner.dnx": "2.1.0-beta4-build134"
+		"xunit": "2.1.0",
+		"xunit.runner.dnx": "2.1.0-rc1"
 	},
 	"commands": {
 		"test": "xunit.runner.dnx"
