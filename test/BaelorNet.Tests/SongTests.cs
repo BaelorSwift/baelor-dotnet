@@ -10,7 +10,7 @@ namespace BaelorNet.Tests
 		[Fact]
 		public async Task ReturnsOneOrMoreSong()
 		{
-			var apiKey = Environment.GetEnvironmentVariable("baelor-test-apikey");
+			var apiKey = Environment.GetEnvironmentVariable("BAELOR_TEST_KEY");
 			var baelorClient = new BaelorClient(apiKey);
 			var songs = await baelorClient.Songs();
 			Assert.NotEmpty(songs);
@@ -21,7 +21,7 @@ namespace BaelorNet.Tests
 		[InlineData("22")]
 		public async Task ReturnsSongFromSlug(string slug)
 		{
-			var apiKey = Environment.GetEnvironmentVariable("baelor-test-apikey");
+			var apiKey = Environment.GetEnvironmentVariable("BAELOR_TEST_KEY");
 			var baelorClient = new BaelorClient(apiKey);
 			var song = await baelorClient.Song(slug);
 			Assert.NotNull(song);
